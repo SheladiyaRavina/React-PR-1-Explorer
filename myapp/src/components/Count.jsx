@@ -27,27 +27,50 @@ class Count extends Component {
   render() {
     const { record } = this.props;
 
-    const dataList = record.map((data, index) => (
-         <tr key={index}>
-            <td>{data.grid}</td>
-            <td>{data.name}</td>
-            <td>{data.email}</td>
-            <td>{data.password}</td>
-            <td>{data.course}</td>
-            <td>{data.city}</td>
-        </tr>
-    ));
+    // const dataList = record.map((data, index) => (
+    //      <tr key={index}>
+    //         <td>{data.grid}</td>
+    //         <td>{data.name}</td>
+    //         <td>{data.email}</td>
+    //         <td>{data.password}</td>
+    //         <td>{data.course}</td>
+    //         <td>{data.city}</td>
+    //     </tr>
+    // ));
 
-    return (
-      <div>
+      return(
         <center>
-          <h1>Table</h1>
-            <table border={1} cellPadding={20}>{dataList}</table>
-            <h2>{this.state.ctn}</h2>
-            <button onClick={this.countPlus}>+</button>
-            <button onClick={this.countMiuns}>-</button>
+            <h1>Table</h1>
+            <table border={1} cellPadding={18}>
+            <thead>
+                <tr>
+                    <th>Grid</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Course</th>
+                    <th>City</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                { record.map((v)=>(
+                        <tr key={v.grid}>
+                            <td>{v.grid}</td>
+                            <td>{v.name}</td>
+                            <td>{v.email}</td>
+                            <td>{v.password}</td>
+                            <td>{v.course}</td>
+                            <td>{v.city}</td>
+                        </tr>
+                ))
+                }
+            </tbody>
+        </table>
+        <h2>{this.state.ctn}</h2>
+              <button onClick={this.countPlus}>+</button>
+              <button onClick={this.countMiuns}>-</button>
         </center>
-      </div>
     );
   }
 }

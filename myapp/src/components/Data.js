@@ -11,7 +11,7 @@ const data = [
       grid : 2,
       name : 'jay',
       email : 'jay@gmail.com',
-      password : 'kishan@123',
+      password : 'jay@123',
       course : ["photosho","figma","illustrator","adobe xd"],
       city : "rajkot"
   },

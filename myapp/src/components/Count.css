@@ -21,3 +21,6 @@ table{
 body{
     background-color: rgba(89, 6, 66, 0.109);
 }
+td{
+    text-align: center;
+}
